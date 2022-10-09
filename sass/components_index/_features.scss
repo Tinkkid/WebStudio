@@ -7,13 +7,31 @@
 }
 
 .section {
-    padding-bottom: 94px;
-    padding-top: 94px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    @media screen and (min-width: 1200px) {
+        padding-top: 94px;
+        padding-bottom: 94px;
+    }
 }
 
+.features__item {
+    margin: 15px;
+
+    @media screen and(min-width: 768px) {
+            width: 354px;
+        }
+    
+        @media screen and(min-width: 1200px) {
+            width: 270px;
+        }
+}
 .features {
+
     display: flex;
-    gap: 30px;
+    flex-wrap: wrap;
+    margin: -15px;
 
     &__title {
             margin-bottom: 10px;
@@ -21,16 +39,22 @@
     
             color: $secondary-text-color;
             font-weight: 700;
+            font-size: 14px;
             line-height: 1.14;
             text-transform: uppercase;
+
+            @media screen and (max-width: 767px) {
+                text-align: center;
+                }
         }
     &__icon {
             margin-bottom: 30px;
             height: 120px;
-            width: 270px;
+
             display: flex;
             justify-content: center;
             align-items: center;
+
             background-color: $secondary-background-color;
             border-radius: 4px;
         }

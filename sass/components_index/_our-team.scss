@@ -4,13 +4,21 @@
 
 .team {
     display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
 
     &__list {
+
+        margin: 15px;
             box-shadow: $modal-shadow;
             border-radius: 0px 0px 4px 4px;
 
-            &:not(:last-child) {
-                    margin-right: 30px;
+            @media screen and(min-width: 768px) {
+                    width: 354px;
+                }
+            
+                @media screen and(min-width: 1200px) {
+                    width: 270px;
                 }
         }
     &__border {
@@ -36,6 +44,7 @@
         text-align: center;
     }
 }
+
 
 // Social icons
 
