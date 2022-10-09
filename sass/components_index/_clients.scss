@@ -1,0 +1,25 @@
+.clients {
+    display: flex;
+    gap: 30px;
+
+    &__link {
+            display: flex;
+            padding: 0;
+            width: 170px;
+            height: 92px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid $fill-svg-social;
+            border-radius: 4px;
+            fill: $fill-svg-social;
+            transition: border 250ms $timing-function,
+                fill 250ms $timing-function;
+
+            &:hover,
+            &:focus {
+                    border: 1px solid $logo-button-text-color;
+                    fill: $logo-button-text-color;
+                }
+        }      
+}

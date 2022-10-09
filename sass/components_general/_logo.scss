@@ -1,0 +1,25 @@
+@mixin logoColor($color) {
+    color: $color;
+}
+
+.logo {
+    display: flex;
+    text-decoration: none;
+    font-family: "Raleway", sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.2;
+
+    &__letters {
+            @include logoColor($logo-button-text-color);
+        }
+
+    &__header {
+        @include logoColor($text-color);
+        margin-right: 92px;
+    }
+    &__footer {
+        @include logoColor($added-text-color);
+        margin-bottom: 20px;
+    }
+}

@@ -1,0 +1,65 @@
+
+.portfolio {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+
+  &__border {
+      padding-top: 20px;
+      padding-bottom: 20px;
+      padding-left: 24px;
+      padding-right: 24px;
+      border-bottom: $color-border-cards;
+      border-left: $color-border-cards;
+      border-right: $color-border-cards;
+    }
+  &__link {
+      position: relative;
+      text-decoration: none;
+      display: block;
+      transition: box-shadow 250ms $timing-function;
+
+      &:hover,
+      &:focus {
+          box-shadow: $portfolio-cards-shadow;
+          transform: translateY(0%);
+        }
+    }
+  &__title {
+    margin-bottom: 4px;
+    color: $secondary-text-color;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+  }
+  &__label {
+    color: $primary-text-color;
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.03em;
+  }
+  &__img {
+    position: relative;
+    overflow: hidden;
+  }
+  &__description {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 63px 24px;
+    background: $ovelay-background-portfolio;
+    font-size: 18px;
+    line-height: 1.56;
+    color: $added-text-color;
+    transform: translateY(100%);
+    transition: transform 250ms $timing-function;
+
+  }
+}
+
+.portfolio__link:hover .portfolio__description {
+  transform: translateY(0%);
+}

@@ -1,0 +1,179 @@
+// Hero 1x img for mobile
+.hero {
+    padding-bottom: 118px;
+    padding-top: 118px;
+    height: 400px;
+    min-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: $background-color-added;
+    text-align: center;
+    background-image: linear-gradient(to right,
+            $hero-bg-overlay,
+            $hero-bg-overlay),
+        url("../images/mobile/hero-mobile.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    &__title {
+            margin-bottom: 30px;
+            margin-top: 0;
+            margin-right: auto;
+            margin-left: auto;
+            max-width: 360px;
+            color: $added-text-color;
+            font-weight: 900;
+            font-size: 26px;
+            line-height: 1.62;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+        }
+    
+        &__btn {
+            min-width: 216px;
+            padding: 10px 32px;
+            border-radius: 4px;
+            border-width: 0;
+            box-shadow: 0px 4px 4px $color-shadow;
+            background-color: $logo-button-text-color;
+            color: $added-text-color;
+            font-family: inherit;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 1.9;
+            letter-spacing: 0.06em;
+            cursor: pointer;
+            transition: background-color 250ms $timing-function;
+    
+            &:hover,
+            &:focus {
+                background-color: $active-button-color;
+            }
+        }
+}
+
+// Hero 2x img for mobile
+ @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        .hero {
+            background-image: linear-gradient(to right,
+                        $hero-bg-overlay,
+                        $hero-bg-overlay),
+                    url("../images/mobile/hero-mobile@2x.jpg");
+        }
+
+    }
+
+// Hero 1x img for tablet
+@media screen and (min-width: 768px) {
+    .hero {
+        min-width: 768px;
+        height: 400px;
+        background-color: $background-color-added;
+        background-image: linear-gradient(to right,
+                    $hero-bg-overlay,
+                    $hero-bg-overlay),
+                url("../images/tablet/hero-tablet.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+  
+            &__btn {
+                min-width: 216px;
+                padding: 10px 32px;
+                border-radius: 4px;
+                border-width: 0;
+                box-shadow: 0px 4px 4px $color-shadow;
+                background-color: $logo-button-text-color;
+                color: $added-text-color;
+                font-family: inherit;
+                font-weight: 700;
+                font-size: 16px;
+                line-height: 1.9;
+                letter-spacing: 0.06em;
+                cursor: pointer;
+                transition: background-color 250ms $timing-function;
+        
+                &:hover,
+                &:focus {
+                    background-color: $active-button-color;
+                }
+                }
+    }
+}
+
+// Hero 2x img for tablet
+@media screen and (min-width: 768px) and (min-device-pixel-ratio:1),
+ (min-resolution: 192dpi), 
+ (min-resolution: 2dppx) {
+    .hero {
+    background-image: linear-gradient(to right,
+                $hero-bg-overlay,
+                $hero-bg-overlay),
+            url("../images/tablet/hero-tablet@2x.jpg");
+    }
+}
+
+// Hero 1x img for desktop
+@media screen and (min-width: 1200px) {
+    .hero {
+        min-width: 1200px;
+        height: 600px;
+        padding-top: 200px;
+        padding-bottom: 200px;
+        background-color: $background-color-added;
+        background-image: linear-gradient(to right,
+                $hero-bg-overlay,
+                $hero-bg-overlay),
+            url("../images/desktop/hero-desktop.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+
+        &__title {
+                max-width: 696px;
+                font-size: 44px;
+                line-height: 1.36;
+            }
+        
+            &__btn {
+                min-width: 216px;
+                padding: 10px 32px;
+                border-radius: 4px;
+                border-width: 0;
+                box-shadow: 0px 4px 4px $color-shadow;
+                background-color: $logo-button-text-color;
+                color: $added-text-color;
+                font-family: inherit;
+                font-weight: 700;
+                font-size: 16px;
+                line-height: 1.9;
+                letter-spacing: 0.06em;
+                cursor: pointer;
+                transition: background-color 250ms $timing-function;
+        
+                &:hover,
+                &:focus {
+                    background-color: $active-button-color;
+                }
+            }
+    }
+}
+
+// Hero 2x img for desktop
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio),
+(min-resolution: 192dpi),
+(min-resolution: 2dppx) {
+    .hero {
+        background-color: $background-color-added;
+        background-image: linear-gradient(to right,
+                $hero-bg-overlay,
+                $hero-bg-overlay),
+            url("../images/desktop/hero-desktop@2x.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}
