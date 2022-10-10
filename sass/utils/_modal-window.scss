@@ -18,16 +18,22 @@
 
 .modal {
     position: absolute;
-    top: 50%;
+    top: 55%;
     left: 50%;
-    width: 528px;
-    height: 581px;
+    width: 450px;
+    height: 609px;
     background-color: $primary-background-color;
     border-radius: 4px;
     box-shadow: $modal-shadow;
 
     transform: scale(1) translate(-50%, -50%);
     transition: transform 250ms $timing-function;
+
+    @media (min-width:769px) {
+    width: 528px;
+    height: 581px;
+    top: 60%;
+    }
 
     &__close:hover &__icon,
     &__close:focus &__icon {

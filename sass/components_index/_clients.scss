@@ -1,11 +1,13 @@
 .clients {
     display: flex;
-    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: -15px;
 
     &__link {
             display: flex;
+            margin: 15px;
             padding: 0;
-            width: 170px;
             height: 92px;
             display: flex;
             align-items: center;
@@ -14,7 +16,7 @@
             border-radius: 4px;
             fill: $fill-svg-social;
             transition: border 250ms $timing-function,
-                fill 250ms $timing-function;
+            fill 250ms $timing-function;
 
             &:hover,
             &:focus {
@@ -22,4 +24,22 @@
                     fill: $logo-button-text-color;
                 }
         }      
+}
+
+@media (min-width: 468px) {
+    .clients__link {
+       width: 210px;
+    }
+}
+
+  @media (min-width: 768px) {
+      .clients__link {
+        width: 226px;
+      }
+  }
+
+@media (min-width: 1200px) {
+    .clients__link {
+        width: 170px;
+    }
 }

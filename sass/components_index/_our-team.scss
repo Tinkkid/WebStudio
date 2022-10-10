@@ -52,6 +52,10 @@
     display: flex;
     gap: 10px;
 
+    @media (max-width: 767px) {
+        justify-content: center;
+    }
+
     &__forteam {
             justify-content: center;
         }

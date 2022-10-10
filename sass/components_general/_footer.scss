@@ -6,6 +6,17 @@
     &__general {
             display: flex;
             align-items: baseline;
+
+            @media (max-width: 767px) {
+                display: block;
+                text-align: center;
+            }
+
+            @media (min-width: 768px) {
+                display: flex;
+                flex-wrap: wrap;
+                padding: 0;
+            }
         }
     &__contacts:not(:last-child) {
         margin-bottom: 9px;
@@ -30,14 +41,48 @@
         transition: color 250ms $timing-function;
 
         &:hover,
-        &:focus,{
+        &:focus {
                 color: $added-text-color;
             }
     }
     &__social {
-        margin-left: 70px;
+
+        // for 1200px
+        // margin-left: 70px;
+
+        @media (max-width: 767px) {
+            display: block;
+            margin-bottom: 60px;
+        }
+
+        @media (min-width: 768px) {
+            margin-left: 165px;
+        }
     }
 
+}
+
+@media (max-width:1199px) {
+    .footer__contacts--mobile {
+        margin-bottom: 60px;
+    }
+    .footer__contacts {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media (min-width:768px) {
+    .footer__contacts--mobile {
+        margin-left: 76px;
+    }
+}
+
+@media (min-width:768px) {
+    .footer__contacts {
+        display: flex;
+        justify-content: center;
+    }
 }
 
 .footer__title,
@@ -49,6 +94,14 @@
     line-height: 1.14;
     text-transform: uppercase;
 }
+
+@media (max-width: 1199px) {
+    .footer__title,
+     .subscribe__title {
+        text-align: center;
+     }
+}
+
 
 .social-icon__footer {
     background: $background-footer-social;
@@ -64,6 +117,12 @@
 .subscribe {
     margin-left: auto;
 
+    @media (min-width: 768px) {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
     &_title {
             margin-bottom: 20px;
         }
@@ -74,7 +133,7 @@
         padding-top: 15px;
         padding-bottom: 15px;
         padding-left: 16px;
-        width: 358px;
+        width: 100%;
         border: 1px solid rgba(255, 255, 255, 0.3);
         filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
         border-radius: 4px;
@@ -82,6 +141,15 @@
         line-height: 1.25;
         background-color: $background-color-added;
         color: $text-color-footer;
+
+        @media (min-width:768px) {
+            min-width: 450px;
+        }
+
+        @media (max-width: 1200px){
+            margin-bottom: 20px;
+        }
+
     }
     &__btn {
         position: relative;
@@ -98,6 +166,12 @@
         letter-spacing: 0.06em;
         cursor: pointer;
         transition: backround-color 250ms $timing-function;
+
+        @media (min-width: 768px) and (max-width: 1199px) {
+            display: flex;
+            margin-left: auto;
+            margin-right: auto;
+        }
 
         &:hover,
         &:focus {
