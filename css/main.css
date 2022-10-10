@@ -1386,14 +1386,6 @@ img {
   padding-bottom: 60px;
   background-color: #2f303a;
 }
-.footer__general {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
-}
 @media (max-width: 767px) {
   .footer__general {
     display: block;
@@ -1408,6 +1400,15 @@ img {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     padding: 0;
+  }
+}
+@media (min-width: 1200px) {
+  .footer__general {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
   }
 }
 .footer__contacts:not(:last-child) {
@@ -1443,7 +1444,8 @@ img {
 }
 @media (min-width: 768px) {
   .footer__social {
-    margin-left: 165px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
@@ -1462,7 +1464,13 @@ img {
 }
 @media (min-width: 768px) {
   .footer__contacts--mobile {
-    margin-left: 76px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+@media (min-width: 768px) and (min-width: 1200px) {
+  .footer__contacts--mobile {
+    margin-left: 0;
   }
 }
 @media (min-width: 768px) {
@@ -1473,6 +1481,13 @@ img {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+  }
+}
+@media (min-width: 768px) and (min-width: 1200px) {
+  .footer__contacts {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
   }
 }
 .footer__title,
@@ -1509,6 +1524,12 @@ img {
     margin-right: auto;
   }
 }
+@media (min-width: 1200px) {
+  .subscribe {
+    margin-left: auto;
+    margin-right: 0;
+  }
+}
 .subscribe_title {
   margin-bottom: 20px;
 }
@@ -1539,6 +1560,11 @@ img {
     margin-bottom: 20px;
   }
 }
+@media (min-width: 1200px) {
+  .subscribe__input {
+    width: 358px;
+  }
+}
 .subscribe__btn {
   position: relative;
   margin-left: 12px;
@@ -1564,6 +1590,11 @@ img {
     display: flex;
     margin-left: auto;
     margin-right: auto;
+  }
+}
+@media (min-width: 1200px) {
+  .subscribe__btn {
+    display: inline-block;
   }
 }
 .subscribe__btn:hover, .subscribe__btn:focus {
