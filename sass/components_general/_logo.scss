@@ -3,15 +3,15 @@
 }
 
 .logo {
-  display: flex;
+  // display: flex;
   text-decoration: none;
   font-family: 'Raleway', sans-serif;
 
   @include font(26px, 700, 1.2);
 
-  @media (max-width: 1199px) {
-    justify-content: center;
-  }
+  // @media (max-width: 1199px) {
+  //   justify-content: center;
+  // }
 
   &__letters {
     @include logoColor($logo-button-text-color);
@@ -19,7 +19,14 @@
 
   &__header {
     @include logoColor($text-color);
-    margin-right: 92px;
+
+    @media (min-width:1200px){
+      margin-right: 92px;
+    }
+    @media (min-width:768px) {
+      margin-right: 88px;
+         }
+
   }
   &__footer {
     @include logoColor($added-text-color);
