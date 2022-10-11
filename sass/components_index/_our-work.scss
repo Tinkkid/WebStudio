@@ -1,47 +1,44 @@
 .work {
-    display: none;
-    
-        @media screen and (min-width: 1200px) {
-            display: block;
-        }
-    padding-bottom: 94px;
+  display: none;
+
+  @media screen and (min-width: 1200px) {
+    display: block;
+  }
+  padding-bottom: 94px;
 }
 
 .our-work {
-    display: flex;
+  display: flex;
 
-    &__img {
-            position: relative;
+  &__img {
+    position: relative;
 
-            &:not(:last-child) {
-                    margin-right: 30px;
-                }
-        }
-    &__overlay {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 370px;
-        height: 70px;
-        padding: 27px 0;
-        background-color: $background-description;
+    &:not(:last-child) {
+      margin-right: 30px;
     }
-    &__label {
-        font-weight: 700;
-        line-height: 1.14;
-        text-align: center;
-        text-transform: uppercase;
-        color: $added-text-color;
-    }
+  }
+  &__overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 370px;
+    height: 70px;
+    padding: 27px 0;
+    background-color: $background-description;
+  }
+  &__label {
+    @include font(14px, 700, 1.14);
+    text-align: center;
+    text-transform: uppercase;
+    color: $added-text-color;
+  }
 }
 
-
 .section-title {
-    margin-bottom: 50px;
+  margin-bottom: 50px;
 
-    color: $secondary-text-color;
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 1.17;
-    text-align: center;
+  color: $secondary-text-color;
+
+  @include font(36px, 700, 1.17);
+  text-align: center;
 }

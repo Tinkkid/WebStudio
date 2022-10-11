@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Webstudio</title>
     <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
       integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
@@ -20,10 +24,11 @@
     <header class="header">
       <!--Navigation's site-->
       <div class="container nav">
+          <!-- Navigation for tablet and desktop -->
+        <nav class="navigation">
         <a href="./index.html" class="logo logo__header"
           ><span class="logo__letters">Web</span>Studio</a
         >
-        <nav>
           <ul class="site-nav">
             <li class="site-nav__item">
               <a href="./index.html" class="site-nav__link">Студія</a>
@@ -53,6 +58,72 @@
             >
           </li>
         </ul>
+                <!-- Mobile menu button -->
+       <button
+          type="button"
+          class="menu-btn js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg
+            width="40"
+            height="40"
+            aria-label="переключатель мобильного меню"
+          >
+            <use
+              class="menu-btn__open"
+              href="./images/icons.svg#icon-menu"
+            ></use>
+          </svg>
+        </button>
+
+        <!-- Mobile menu container -->
+        <div class="menu-container js-menu-container" id="mobile-menu">
+          <button
+          type="button"
+          class="menu-btn js-close-menu"
+        >
+          <svg
+            width="40"
+            height="40"
+            aria-label="переключатель мобильного меню"
+          >
+            <use
+              class="menu-btn__close"
+              href="./images/icons.svg#icon-cross"
+            ></use>
+          </svg>
+        </button>
+            <ul class="menu-nav">
+            <li class="menu-nav__item">
+              <a href="./index.html" class="menu-nav__link menu-nav__link--current">Студія</a>
+            </li>
+            <li class="menu-nav__item">
+              <a href="./portfolio.html" class="menu-nav__link">Портфоліо</a>
+            </li>
+            <li class="menu-nav__item"><a href="" class="menu-nav__link">Контакти</a></li>
+          </ul>
+           <ul class="menu-contacts">
+          <li class="menu-contacts__item">
+            <a href="tel:+380961111111" class="menu-contacts__phone"
+              >+38 096 111 11 11</a
+            >
+          </li>
+          <li class="menu-contacts__item">
+            <a href="mailto:info@devstudio.com" class="menu-contacts__email"
+              >
+              info@devstudio.com</a
+            >
+          </li>
+        </ul>
+        <ul class="social-nav">
+          <li class="social-nav__item"><a href="" class="social-nav__link">Instagram</a></li>
+          <li class="social-nav__item"><a href="" class="social-nav__link">Twitter</a></li>
+          <li class="social-nav__item"><a href="" class="social-nav__link">Facebook</a></li>
+          <li class="social-nav__item"><a href="" class="social-nav__link">Linkedin</a></li>
+        </ul>
+          </div>
+
       </div>
     </header>
 
@@ -89,10 +160,19 @@
               <a href="" class="portfolio__link">
                 <div class="portfolio__img">
                   <img
-                    src="./images/images-portfolio/portfolio1.jpg"
-                    alt="приклад сайта"
-                    width="370"
-                    height="274"
+                    srcset="
+                  ./images/mobile/portfolio1.jpg 270w,
+                  ./images/mobile/portfolio@2x.jpg 354w,
+                  ./images/tablet/pf1-tablet.jpg 450w,
+                  ./images/tablet/pf1-tablet@2x.jpg 540w,
+                  ./images/desktop/pf1-desk.jpg 708w,
+                  ./images/desktop/pf1-desk@2x.jpg 900w
+                "
+                src="./images/mobile/portfolio1.jpg"
+                alt="приклад роботи"
+                sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
+                width="450"
+          
                   />
                   <p class="portfolio__description">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -110,10 +190,19 @@
               <a href="" class="portfolio__link">
                 <div class="portfolio__img">
                   <img
-                    src="./images/images-portfolio/portfolio2.jpg"
-                    alt="гра в баскетбол"
-                    width="370"
-                    height="274"
+                  srcset="
+                  ./images/mobile/portfolio2.jpg 270w,
+                  ./images/mobile/portfolio2@2x.jpg 354w,
+                  ./images/tablet/pf2-tablet.jpg 450w,
+                  ./images/tablet/pf2-tablet@2x.jpg 540w,
+                  ./images/desktop/pf2-desk.jpg 708w,
+                  ./images/desktop/pf2-desk@2x.jpg 900w
+                "
+                src="./images/mobile/portfolio2.jpg"
+               alt="гра в баскетбол"
+                sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
+                width="450"
+    
                   />
                   <p class="portfolio__description">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -133,10 +222,19 @@
               <a href="" class="portfolio__link"
                 ><div class="portfolio__img">
                   <img
-                    src="./images/images-portfolio/portfolio3.jpg"
-                    alt="логотип ресторана морської кухні"
-                    width="370"
-                    height="274"
+                  srcset="
+                  ./images/mobile/portfolio3.jpg 270w,
+                  ./images/mobile/portfolio3@2x.jpg 354w,
+                  ./images/tablet/pf3-tablet.jpg 450w,
+                  ./images/tablet/pf3-tablet@2x.jpg 540w,
+                  ./images/desktop/pf3-desk.jpg 708w,
+                  ./images/desktop/pf3-desk@2x.jpg 900w
+                "
+                src="./images/mobile/portfolio3.jpg"
+               alt="логотип ресторана морської кухні"
+                sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
+                width="450"
+              
                   />
                   <p class="portfolio__description">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -154,10 +252,18 @@
               <a href="" class="portfolio__link"
                 ><div class="portfolio__img">
                   <img
-                    src="./images/images-portfolio/portfolio4.jpg"
-                    alt="навушники"
-                    width="370"
-                    height="274"
+                    srcset="
+                  ./images/mobile/portfolio4.jpg 270w,
+                  ./images/mobile/portfolio4@2x.jpg 354w,
+                  ./images/tablet/pf4-tablet.jpg 450w,
+                  ./images/tablet/pf4-tablet@2x.jpg 540w,
+                  ./images/desktop/pf4-desk.jpg 708w,
+                  ./images/desktop/pf4-desk@2x.jpg 900w
+                "
+                src="./images/mobile/portfolio4.jpg"
+               alt="навушники"
+                sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
+                width="450"
                   />
                   <p class="portfolio__description">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -175,10 +281,18 @@
               <a href="" class="portfolio__link"
                 ><div class="portfolio__img">
                   <img
-                    src="./images/images-portfolio/portfolio5.jpg"
-                    alt="дві картоні коробки"
-                    width="370"
-                    height="274"
+                    srcset="
+                  ./images/mobile/portfolio5.jpg 270w,
+                  ./images/mobile/portfolio5@2x.jpg 354w,
+                  ./images/tablet/pf5-tablet.jpg 450w,
+                  ./images/tablet/pf5-tablet@2x.jpg 540w,
+                  ./images/desktop/pf5-desk.jpg 708w,
+                  ./images/desktop/pf5-desk@2x.jpg 900w
+                "
+                src="./images/mobile/portfolio5.jpg"
+               alt="дві картоні коробки"
+                sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
+                width="450"
                   />
                   <p class="portfolio__description">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -196,10 +310,18 @@
               <a href="" class="portfolio__link"
                 ><div class="portfolio__img">
                   <img
-                    src="./images/images-portfolio/portfolio6.jpg"
-                    alt="монітор із зображенням сайту"
-                    width="370"
-                    height="274"
+                    srcset="
+                  ./images/mobile/portfolio6.jpg 270w,
+                  ./images/mobile/portfolio6@2x.jpg 354w,
+                  ./images/tablet/pf6-tablet.jpg 450w,
+                  ./images/tablet/pf6-tablet@2x.jpg 540w,
+                  ./images/desktop/pf6-desk.jpg 708w,
+                  ./images/desktop/pf6-desk@2x.jpg 900w
+                "
+                src="./images/mobile/portfolio6.jpg"
+               alt="монітор із зображення сайту"
+                sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
+                width="450"
                   />
                   <p class="portfolio__description">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -217,10 +339,18 @@
               <a href="" class="portfolio__link"
                 ><div class="portfolio__img">
                   <img
-                    src="./images/images-portfolio/portfolio7.jpg"
-                    alt="відкритий журнал"
-                    width="370"
-                    height="274"
+                    srcset="
+                  ./images/mobile/portfolio7.jpg 270w,
+                  ./images/mobile/portfolio7@2x.jpg 354w,
+                  ./images/tablet/pf7-tablet.jpg 450w,
+                  ./images/tablet/pf7-tablet@2x.jpg 540w,
+                  ./images/desktop/pf7-desk.jpg 708w,
+                  ./images/desktop/pf7-desk@2x.jpg 900w
+                "
+                src="./images/mobile/portfolio7.jpg"
+               alt="відкритий журнал"
+                sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
+                width="450"
                   />
                   <p class="portfolio__description">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -238,10 +368,18 @@
               <a href="" class="portfolio__link"
                 ><div class="portfolio__img">
                   <img
-                    src="./images/images-portfolio/portfolio8.jpg"
-                    alt="лейба для одягу та товарів"
-                    width="370"
-                    height="274"
+                    srcset="
+                  ./images/mobile/portfolio8.jpg 270w,
+                  ./images/mobile/portfolio8@2x.jpg 354w,
+                  ./images/tablet/pf8-tablet.jpg 450w,
+                  ./images/tablet/pf8-tablet@2x.jpg 540w,
+                  ./images/desktop/pf8-desk.jpg 708w,
+                  ./images/desktop/pf8-desk@2x.jpg 900w
+                "
+                src="./images/mobile/portfolio8.jpg"
+               alt="лейба для одягу"
+                sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
+                width="450"
                   />
                   <p class="portfolio__description">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -259,10 +397,18 @@
               <a href="" class="portfolio__link"
                 ><div class="portfolio__img">
                   <img
-                    src="./images/images-portfolio/portfolio9.jpg"
-                    alt="руки на клавіатурі ноутбука"
-                    width="370"
-                    height="274"
+                    srcset="
+                  ./images/mobile/portfolio9.jpg 270w,
+                  ./images/mobile/portfolio9@2x.jpg 354w,
+                  ./images/tablet/pf9-tablet.jpg 450w,
+                  ./images/tablet/pf9-tablet@2x.jpg 540w,
+                  ./images/desktop/pf9-desk.jpg 708w,
+                  ./images/desktop/pf9-desk@2x.jpg 900w
+                "
+                src="./images/mobile/portfolio9.jpg"
+               alt="руки на клавітурі ноутбука"
+                sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
+                width="450"
                   />
                   <p class="portfolio__description">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -284,7 +430,7 @@
     <!-- Adress -->
     <footer class="footer">
       <div class="container footer__general">
-        <div>
+        <div class="footer__contacts--mobile">
           <a href="./index.html" class="logo logo__footer"
             ><span class="logo__letters">Web</span>Studio</a
           >
@@ -312,7 +458,7 @@
             </ul>
           </address>
         </div>
-         <div class="footer__social">
+        <div class="footer__social">
           <p class="footer__title">приєднуйтесь</p>
           <ul class="social-icon">
             <li>
@@ -355,5 +501,13 @@
         </div>
       </div>
     </footer>
+
+            <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="js/mobile-menu.js"></script>
   </body>
 </html>

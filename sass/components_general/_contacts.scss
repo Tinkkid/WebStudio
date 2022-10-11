@@ -1,60 +1,55 @@
 .contacts {
-    // margin-left: auto;
+  display: flex;
+
+  @media (min-width: 768px) and (max-width: 1199px) {
     display: flex;
+    flex-direction: column;
+    margin-left: 96px;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 30px;
 
     @media (min-width: 768px) and (max-width: 1199px) {
-        display: flex;
-        flex-direction:column;
-        margin-left: 96px;
+      margin-bottom: 10px;
     }
-   
-    &__item:not(:last-child) {
-            margin-right: 30px;
+  }
+  &__icon {
+    margin-right: 10px;
+    fill: currentColor;
+  }
+  &__details {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    display: flex;
+    align-items: center;
+    color: $primary-text-color;
+    text-decoration: none;
 
-            @media (min-width: 768px) and (max-width: 1199px) {
-                margin-bottom: 10px;
-            }
-        }
-    &__icon {
-        margin-right: 10px;
-        fill: currentColor;
+    @include font(14px, 500, 1.14);
+    letter-spacing: 0.02em;
+    transition: color 250ms Stiming-function, fill 250ms $timing-function;
+
+    @media (min-width: 768px) and (max-width: 1199px) {
+      padding: 0;
     }
-    &__details {
-        padding-top: 32px;
-        padding-bottom: 32px;
-        display: flex;
-        align-items: center;
-        color: $primary-text-color;
-        text-decoration: none;
-        font-weight: 500;
-        font-size: 14px;
-        line-height: 1.14;
-        letter-spacing: 0.02em;
-        transition: color 250ms Stiming-function,
-            fill 250ms $timing-function;
 
-            @media (min-width: 768px) and (max-width: 1199px) {
-                padding: 0;
-
-            }
-
-            &:hover,
-            &:focus {
-                color: $logo-button-text-color;
-                fill: $logo-button-text-color;
-                }
+    &:hover,
+    &:focus {
+      color: $logo-button-text-color;
+      fill: $logo-button-text-color;
     }
+  }
 }
 
- @media (min-width: 1200px) {
-    .contacts {
-        margin-left: 315px;
-    }
-    
+@media (min-width: 1200px) {
+  .contacts {
+    margin-left: 315px;
+  }
 }
 
 @media screen and (max-width: 767px) {
-    .contacts {
-        display: none;
-    }
+  .contacts {
+    display: none;
+  }
 }

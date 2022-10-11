@@ -1,45 +1,44 @@
 .clients {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: -15px;
+
+  &__link {
     display: flex;
-    flex-wrap: wrap;
+    margin: 15px;
+    padding: 0;
+    height: 92px;
+    display: flex;
+    align-items: center;
     justify-content: center;
-    margin: -15px;
+    border: 1px solid $fill-svg-social;
+    border-radius: 4px;
+    fill: $fill-svg-social;
+    transition: border 250ms $timing-function, fill 250ms $timing-function;
 
-    &__link {
-            display: flex;
-            margin: 15px;
-            padding: 0;
-            height: 92px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border: 1px solid $fill-svg-social;
-            border-radius: 4px;
-            fill: $fill-svg-social;
-            transition: border 250ms $timing-function,
-            fill 250ms $timing-function;
-
-            &:hover,
-            &:focus {
-                    border: 1px solid $logo-button-text-color;
-                    fill: $logo-button-text-color;
-                }
-        }      
+    &:hover,
+    &:focus {
+      border: 1px solid $logo-button-text-color;
+      fill: $logo-button-text-color;
+    }
+  }
 }
 
 @media (min-width: 468px) {
-    .clients__link {
-       width: 210px;
-    }
+  .clients__link {
+    width: 210px;
+  }
 }
 
-  @media (min-width: 768px) {
-      .clients__link {
-        width: 226px;
-      }
+@media (min-width: 768px) {
+  .clients__link {
+    width: 226px;
   }
+}
 
 @media (min-width: 1200px) {
-    .clients__link {
-        width: 170px;
-    }
+  .clients__link {
+    width: 170px;
+  }
 }

@@ -1,65 +1,63 @@
 .backdrop {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: $backgroud-backdrop;
-
-    opacity: 1;
-    transition: opacity 250ms $timing-function;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $backgroud-backdrop;
+  opacity: 1;
+  transition: opacity 250ms $timing-function;
 }
 
 .is-hidden {
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
 }
 
 .modal {
-    position: absolute;
-    top: 55%;
-    left: 50%;
-    width: 450px;
-    height: 609px;
-    background-color: $primary-background-color;
-    border-radius: 4px;
-    box-shadow: $modal-shadow;
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  width: 450px;
+  height: 609px;
+  background-color: $primary-background-color;
+  border-radius: 4px;
+  box-shadow: $modal-shadow;
 
-    transform: scale(1) translate(-50%, -50%);
-    transition: transform 250ms $timing-function;
+  transform: scale(1) translate(-50%, -50%);
+  transition: transform 250ms $timing-function;
 
-    @media (min-width:769px) {
+  @media (min-width: 769px) {
     width: 528px;
     height: 581px;
     top: 60%;
-    }
+  }
 
-    &__close:hover &__icon,
-    &__close:focus &__icon {
-        fill: $active-button-color;
-    }
+  &__close:hover &__icon,
+  &__close:focus &__icon {
+    fill: $active-button-color;
+  }
 
-    &__close {
-            position: absolute;
-            right: 8px;
-            top: 8px;
-            min-width: 30px;
-            min-height: 30px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 0;
-            border-radius: 50%;
-            cursor: pointer;
-            border: 1px solid rgba(0, 0, 0, 0.1);
-            background-color: $primary-background-color;
-            transition: fill 250ms $timing-function;
+  &__close {
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    min-width: 30px;
+    min-height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: $primary-background-color;
+    transition: fill 250ms $timing-function;
+  }
 
-        }
-            
-    &__icon {
-        fill: currentColor;
-        transition: fill 250ms $timing-function;
-        }
+  &__icon {
+    fill: currentColor;
+    transition: fill 250ms $timing-function;
+  }
 }

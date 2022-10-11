@@ -1,22 +1,22 @@
 .nav {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
 
-      @media (min-width: 1200px) {
-          margin: 0 auto;
-      }
+  @media (min-width: 1200px) {
+    margin: 0 auto;
+  }
 
-      @media screen and (min-width: 768px) {
-          height: 80px;
-        }
-    }
+  @media screen and (min-width: 768px) {
+    height: 80px;
+  }
+}
 
-    .navigation {
-      display: flex;
-      align-items: center;
-    }
+.navigation {
+  display: flex;
+  align-items: center;
+}
 
 .header {
   position: relative;
@@ -25,43 +25,42 @@
   border-bottom: $color-border-header;
 
   @media screen and (min-width: 768px) {
-        height: 80px;
-        display: flex;
-      }
-    }
+    height: 80px;
+    display: flex;
+  }
+}
 
 .site-nav {
   display: flex;
 
   &__link {
     padding-top: 32px;
-        padding-bottom: 32px;
-        color: $secondary-text-color;
-        text-decoration: none;
-        font-weight: 500;
-        font-size: 14px;
-        line-height: 1.14;
-        letter-spacing: 0.02em;
-        transition: color 250ms $timing-function;
+    padding-bottom: 32px;
+    color: $secondary-text-color;
+    text-decoration: none;
 
-        &--current {
-            position: relative;
-            color: $logo-button-text-color;
-          }
-        &--current::after {
-          position: absolute;
-          bottom: 0px;
-          content: "";
-          display: block;
-          width: 100%;
-          height: 4px;
-          background-color: $logo-button-text-color;
-          border-radius: 2px;
-        }
-        &:hover,
-        &:focus {
-          color: $logo-button-text-color;
-        }
+    @include font(14px, 500, 1.14);
+    letter-spacing: 0.02em;
+    transition: color 250ms $timing-function;
+
+    &--current {
+      position: relative;
+      color: $logo-button-text-color;
+    }
+    &--current::after {
+      position: absolute;
+      bottom: 0px;
+      content: '';
+      display: block;
+      width: 100%;
+      height: 4px;
+      background-color: $logo-button-text-color;
+      border-radius: 2px;
+    }
+    &:hover,
+    &:focus {
+      color: $logo-button-text-color;
+    }
   }
 }
 
@@ -127,7 +126,6 @@
 }
 
 .menu-nav {
-
   margin-bottom: 302px;
 
   &__item:not(:last-child) {
@@ -135,7 +133,6 @@
   }
 
   &__link {
-
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 500;
@@ -165,9 +162,8 @@
   &__phone {
     font-family: 'Roboto';
     font-style: normal;
-    font-weight: 500;
-    font-size: 34px;
-    line-height: 1.18;
+
+    @include font(34px, 500, 1.18);
     letter-spacing: 0.02em;
     color: $logo-button-text-color;
   }
@@ -175,9 +171,7 @@
   &__email {
     font-family: 'Roboto';
     font-style: normal;
-    font-weight: 500;
-    font-size: 24px;
-    line-height: 1.17;
+    @include font(24px, 500, 1.18);
     letter-spacing: 0.02em;
     color: $primary-text-color;
   }
@@ -188,29 +182,25 @@
 
   &__item:not(:last-child) {
     padding-right: 20px;
-
   }
 
   &__link {
     position: relative;
     font-family: 'Roboto';
     font-style: normal;
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 1.22;
+    @include font(18px, 500, 1.22);
     letter-spacing: 0.02em;
     color: $logo-button-text-color;
 
     &::after {
       position: absolute;
-      content: "";
+      content: '';
       top: 50%;
       width: 22px;
       height: 1px;
       background-color: rgba(33, 33, 33, 0.2);
       border: 1px solid rgba(33, 33, 33, 0.2);
       transform: rotate(90deg);
-
     }
   }
 }

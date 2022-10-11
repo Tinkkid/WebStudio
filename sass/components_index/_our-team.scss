@@ -1,82 +1,80 @@
 .section-team {
-    background-color: $secondary-background-color;
+  background-color: $secondary-background-color;
 }
 
 .team {
-    display: flex;
-    flex-wrap: wrap;
-    margin: -15px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: -15px;
 
-    &__list {
+  &__list {
+    margin: 15px;
+    box-shadow: $modal-shadow;
+    border-radius: 0px 0px 4px 4px;
 
-        margin: 15px;
-            box-shadow: $modal-shadow;
-            border-radius: 0px 0px 4px 4px;
+    @media screen and(min-width: 768px) {
+      width: 354px;
+    }
 
-            @media screen and(min-width: 768px) {
-                    width: 354px;
-                }
-            
-                @media screen and(min-width: 1200px) {
-                    width: 270px;
-                }
-        }
-    &__border {
-        padding-top: 30px;
-        padding-bottom: 30px;
-        border-radius: 0px 0px 4px 4px;
-        background: $primary-background-color;
+    @media screen and(min-width: 1200px) {
+      width: 270px;
+      justify-content: center;
     }
-    &__name {
-        margin-bottom: 10px;
-    
-        color: $secondary-text-color;
-        font-weight: 500;
-        font-size: 16px;
-        line-height: 1.19;
-        text-align: center;
-    }
-    &__position {
-        margin-bottom: 16px;
-    
-        font-size: 16px;
-        line-height: 1.19;
-        text-align: center;
-    }
+  }
+  &__border {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border-radius: 0px 0px 4px 4px;
+    background: $primary-background-color;
+  }
+  &__name {
+    margin-bottom: 10px;
+
+    color: $secondary-text-color;
+
+    @include font(16px, 500, 1.19);
+    text-align: center;
+  }
+  &__position {
+    margin-bottom: 16px;
+
+    @include font(16px, 400, 1.19);
+    font-size: 16px;
+    line-height: 1.19;
+    text-align: center;
+  }
 }
-
 
 // Social icons
 
 .social-icon {
+  display: flex;
+  gap: 10px;
+
+  @media (max-width: 767px) {
+    justify-content: center;
+  }
+
+  &__forteam {
+    justify-content: center;
+  }
+  &__link {
     display: flex;
-    gap: 10px;
-
-    @media (max-width: 767px) {
-        justify-content: center;
-    }
-
-    &__forteam {
-            justify-content: center;
-        }
-    &__link {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 0;
-        width: 44px;
-        height: 44px;
-        border-radius: 50%;
-        transition: fill 250ms $timing-function,
-            background-color 250ms $timing-function;
-    }
-    &__active {
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    transition: fill 250ms $timing-function, background-color 250ms $timing-function;
+  }
+  &__active {
     fill: $fill-svg-social;
 
-        &:hover,
-        &:focus {
-        background-color: $logo-button-text-color;
-        fill: $primary-background-color;
-        }
-}
+    &:hover,
+    &:focus {
+      background-color: $logo-button-text-color;
+      fill: $primary-background-color;
+    }
+  }
 }

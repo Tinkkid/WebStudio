@@ -4,7 +4,6 @@
   background-color: $background-color-added;
 
   &__general {
-    
     @media (max-width: 767px) {
       display: block;
       text-align: center;
@@ -17,8 +16,8 @@
     }
 
     @media (min-width: 1200px) {
-        flex-wrap: nowrap;
-        align-items: baseline;
+      flex-wrap: nowrap;
+      align-items: baseline;
     }
   }
   &__contacts:not(:last-child) {
@@ -49,15 +48,14 @@
     }
   }
   &__social {
-
     @media (max-width: 767px) {
       display: block;
       margin-bottom: 60px;
     }
 
     @media (min-width: 768px) {
-    margin-left: auto;
-    margin-right: auto;
+      margin-left: auto;
+      margin-right: auto;
     }
   }
 }
@@ -78,7 +76,7 @@
     margin-left: auto;
 
     @media (min-width: 1200px) {
-        margin-left: 0;
+      margin-left: 0;
     }
   }
 }
@@ -88,8 +86,8 @@
     display: flex;
     justify-content: center;
 
-    @media (min-width:1200px) {
-    justify-content: flex-start;
+    @media (min-width: 1200px) {
+      justify-content: flex-start;
     }
   }
 }
@@ -99,8 +97,8 @@
   display: block;
   margin-bottom: 20px;
   color: $added-text-color;
-  font-weight: 700;
-  line-height: 1.14;
+
+  @include font(14px, 700, 1.14);
   text-transform: uppercase;
 }
 
@@ -149,8 +147,8 @@
     border: 1px solid rgba(255, 255, 255, 0.3);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
     border-radius: 4px;
-    font-size: 16px;
-    line-height: 1.25;
+
+    @include font(16px, 400, 1.25);
     background-color: $background-color-added;
     color: $text-color-footer;
 
@@ -163,7 +161,7 @@
     }
 
     @media (min-width: 1200px) {
-        width: 358px;
+      width: 358px;
     }
   }
   &__btn {
@@ -174,9 +172,8 @@
     color: $added-text-color;
     border-radius: 4px;
     box-shadow: $shadow-form-button;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 1.88;
+
+    @include font(16px, 700, 1.88);
     text-align: center;
     letter-spacing: 0.06em;
     cursor: pointer;
@@ -188,8 +185,8 @@
       margin-right: auto;
     }
 
-    @media (min-width:1200px) {
-        display: inline-block;
+    @media (min-width: 1200px) {
+      display: inline-block;
     }
 
     &:hover,

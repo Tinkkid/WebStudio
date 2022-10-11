@@ -1,61 +1,59 @@
 .visually-hidden {
-    position: absolute;
-    clip: rect(0 0 0 0);
-    width: 1px;
-    height: 1px;
-    margin: -1px;
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
 }
 
 .section {
-    padding-top: 60px;
-    padding-bottom: 60px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 
-    @media screen and (min-width: 1200px) {
-        padding-top: 94px;
-        padding-bottom: 94px;
-    }
+  @media screen and (min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .features__item {
-    margin: 15px;
+  margin: 15px;
 
-    @media screen and(min-width: 768px) {
-            width: 354px;
-        }
-    
-        @media screen and(min-width: 1200px) {
-            width: 270px;
-        }
+  @media screen and(min-width: 768px) {
+    width: 354px;
+  }
+
+  @media screen and(min-width: 1200px) {
+    width: 270px;
+  }
 }
 .features {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -15px;
+
+  &__title {
+    margin-bottom: 10px;
+    margin-top: 0;
+
+    color: $secondary-text-color;
+
+    @include font(14px, 700, 1.14);
+    text-transform: uppercase;
+
+    @media screen and (max-width: 767px) {
+      text-align: center;
+    }
+  }
+  &__icon {
+    margin-bottom: 30px;
+    height: 120px;
 
     display: flex;
-    flex-wrap: wrap;
-    margin: -15px;
+    justify-content: center;
+    align-items: center;
 
-    &__title {
-            margin-bottom: 10px;
-            margin-top: 0;
-    
-            color: $secondary-text-color;
-            font-weight: 700;
-            font-size: 14px;
-            line-height: 1.14;
-            text-transform: uppercase;
-
-            @media screen and (max-width: 767px) {
-                text-align: center;
-                }
-        }
-    &__icon {
-            margin-bottom: 30px;
-            height: 120px;
-
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-            background-color: $secondary-background-color;
-            border-radius: 4px;
-        }
+    background-color: $secondary-background-color;
+    border-radius: 4px;
+  }
 }

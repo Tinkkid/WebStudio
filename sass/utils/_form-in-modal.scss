@@ -1,112 +1,107 @@
-
 /* Form for order */
 .form {
-    padding: 40px;
+  padding: 40px;
 
-    &__title {
-            margin-bottom: 12px;
-            font-weight: 700;
-            font-size: 20px;
-            line-height: 1.15;
-            text-align: center;
-            color: $secondary-text-color;
-        }
-    &__label {
-        display: flex;
-        flex-direction: column;
-        margin-bottom: 10px;
-        position: relative;
-        font-size: 12px;
-        line-height: 1.17;
-        letter-spacing: 0.01em;
+  &__title {
+    margin-bottom: 12px;
 
-        &:last-child {
-                margin-bottom: 0px;
-            }
-    }
-    &__input {
-        padding-left: 42px;
-        padding-top: 12px;
-        padding-bottom: 12px;
+    @include font(20px, 700, 1.15);
+    text-align: center;
+    color: $secondary-text-color;
+  }
+  &__label {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    position: relative;
 
-        &:focus-within+.form__icon {
-                fill: $background-color-hover;
-            }
-    }
-    &__input:focus-within,
-    &__feedback:focus-within {
-        border-color: $background-color-hover;
-        outline: none;
-    }
-    &__input,
-    &__feedback {
-        border: $border-form-order;
-        border-radius: 4px;
-        margin-top: 4px;
-        transition: border-color 250ms $timing-function;
-    }
-    &__feedback {
-        padding: 12px 16px;
-        resize: none;
-        height: 120px;
+    @include font(12px, 400, 1.17);
+    letter-spacing: 0.01em;
 
-        &::placeholder {
-                font-size: 12px;
-                line-height: 1.17;
-                letter-spacing: 0.01em;
-                color: $text-color-placeholder;
-            }
+    &:last-child {
+      margin-bottom: 0px;
     }
-    &__btn {
-        display: block;
-        margin: auto;
-        padding-top: 10px;
-        padding-bottom: 10px;
-        min-width: 200px;
-        max-height: 50px;
-        background-color: $logo-button-text-color;
-        color: $added-text-color;
-        border-radius: 4px;
-        box-shadow: $shadow-form-button;
-        font-weight: 700;
-        font-size: 16px;
-        line-height: 1.88;
-        text-align: center;
-        letter-spacing: 0.06em;
-        cursor: pointer;
-        transition: backround-color 250ms $timing-function;
+  }
+  &__input {
+    padding-left: 42px;
+    padding-top: 12px;
+    padding-bottom: 12px;
 
-        &:hover,
-        &:focus {
-            background-color: $active-button-color;
-            }
+    &:focus-within + .form__icon {
+      fill: $background-color-hover;
     }
-    &__icon {
-        position: absolute;
-        display: block;
-        top: 50%;
-        left: 12px;
-        transition: fill 250ms $timing-function;
-    }
+  }
+  &__input:focus-within,
+  &__feedback:focus-within {
+    border-color: $background-color-hover;
+    outline: none;
+  }
+  &__input,
+  &__feedback {
+    border: $border-form-order;
+    border-radius: 4px;
+    margin-top: 4px;
+    transition: border-color 250ms $timing-function;
+  }
+  &__feedback {
+    padding: 12px 16px;
+    resize: none;
+    height: 120px;
 
+    &::placeholder {
+      @include font(12px, 400, 1.17);
+      letter-spacing: 0.01em;
+      color: $text-color-placeholder;
+    }
+  }
+  &__btn {
+    display: block;
+    margin: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    min-width: 200px;
+    max-height: 50px;
+    background-color: $logo-button-text-color;
+    color: $added-text-color;
+    border-radius: 4px;
+    box-shadow: $shadow-form-button;
+
+    @include font(16px, 700, 1.88);
+    text-align: center;
+    letter-spacing: 0.06em;
+    cursor: pointer;
+    transition: backround-color 250ms $timing-function;
+
+    &:hover,
+    &:focus {
+      background-color: $active-button-color;
+    }
+  }
+  &__icon {
+    position: absolute;
+    display: block;
+    top: 50%;
+    left: 12px;
+    transition: fill 250ms $timing-function;
+  }
 }
 
 .conditions {
-    margin-left: 10px;
+  margin-left: 10px;
 
-    &__agree {
-            position: relative;
-            color: $logo-button-text-color;
-            text-decoration: none;
+  &__agree {
+    position: relative;
+    color: $logo-button-text-color;
+    text-decoration: none;
 
-            &::after {
-                    content: "";
-                    position: absolute;
-                    left: 0;
-                    bottom: 1px;
-                    width: 100%;
-                    height: 1px;
-                    background-color: $logo-button-text-color;
-                }
-        }
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 1px;
+      width: 100%;
+      height: 1px;
+      background-color: $logo-button-text-color;
+    }
+  }
 }
