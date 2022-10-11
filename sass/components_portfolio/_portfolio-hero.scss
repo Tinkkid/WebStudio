@@ -69,3 +69,11 @@
 .portfolio__link:hover .portfolio__description {
   transform: translateY(0%);
 }
+
+@media (min-width:768px) {
+.grow-card {
+display: flex;
+flex-direction: column;
+flex-grow: 1;
+  }
+}
