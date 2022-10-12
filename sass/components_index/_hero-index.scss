@@ -26,13 +26,13 @@
   // Hero img for tablet
   @media screen and (min-width: 768px) {
     background-image: linear-gradient(to right, $hero-bg-overlay, $hero-bg-overlay),
-      url("/images/tablet/hero-tablet.jpg");
+      url(../images/tablet/hero-tablet.jpg);
     // min-width: 780px;
     height: 400px;
 
     @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
       background-image: linear-gradient(to right, $hero-bg-overlay, $hero-bg-overlay),
-        url("/images/tablet/hero-tablet@2x.jpg");
+        url(../images/tablet/hero-tablet@2x.jpg);
     }
   }
 }
