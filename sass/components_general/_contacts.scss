@@ -32,6 +32,7 @@
 
     @media (min-width: 768px) and (max-width: 1199px) {
       padding: 0;
+      @include font(12px, 500, 1.14);
     }
 
     &:hover,
