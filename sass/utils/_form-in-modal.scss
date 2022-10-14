@@ -48,10 +48,15 @@
     resize: none;
     height: 120px;
 
+
     &::placeholder {
-      @include font(12px, 400, 1.17);
+      @include font(14px, 400, 1.14);
       letter-spacing: 0.01em;
       color: $text-color-placeholder;
+
+      @media (min-width: 1200px) {
+        @include font(12px, 400, 1.17);
+      }
     }
   }
   &__btn {
@@ -87,7 +92,15 @@
 }
 
 .conditions {
-  margin-left: 10px;
+  margin-left: 7px;
+
+  @include font(12px, 400, 1.17);
+
+  @media (min-width: 768px) {
+
+    @include font(14px,400,1.71);
+  }
+
 
   &__agree {
     position: relative;

@@ -70,10 +70,8 @@
   transform: translateY(0%);
 }
 
-@media (min-width:768px) {
+@media (min-width:768px) and (max-width: 1199px) {
 .grow-card {
-display: flex;
-flex-direction: column;
-flex-grow: 1;
+ height: 146px;
   }
 }
