@@ -56,13 +56,25 @@
     left: 0;
     width: 100%;
     height: 100%;
-    padding: 63px 24px;
+    padding: 77px 24px;
+
+    @media (min-width:768px) {
+          padding: 49px 24px 77px 24px;
+        }
+                 @media (min-width:1200px) {
+                   padding: 63px 24px;
+                 }
     background: $ovelay-background-portfolio;
 
     @include font(18px, 400, 1.56);
     color: $added-text-color;
     transform: translateY(100%);
     transition: transform 250ms $timing-function;
+  }
+}
+@media (max-width:1199px) {
+  .portfolio__link:focus .portfolio__description {
+    transform: translateY(0%);
   }
 }
 

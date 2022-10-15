@@ -173,13 +173,18 @@ img {
 .menu-container {
   background-color: #ffffff;
   position: fixed;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
-  padding-top: 48px;
-  padding-left: 40px;
-  padding-bottom: 48px;
+  width: 100%;
+  height: 100%;
+  padding: 48px 40px;
   z-index: 999;
   -webkit-transform: translateX(100%);
           transform: translateX(100%);
@@ -206,7 +211,14 @@ img {
 }
 
 .menu-nav {
-  margin-bottom: 302px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: auto;
 }
 .menu-nav__item:not(:last-child) {
   padding-bottom: 32px;
@@ -228,7 +240,14 @@ img {
 }
 
 .menu-contacts {
-  margin-bottom: 64px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: auto;
 }
 .menu-contacts__item:not(:last-child) {
   padding-bottom: 32px;
@@ -253,9 +272,19 @@ img {
 }
 
 .social-nav {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-left: auto;
+  margin-right: auto;
 }
 .social-nav__item:not(:last-child) {
   padding-right: 20px;
@@ -307,6 +336,16 @@ img {
   color: #ffffff;
   margin-bottom: 20px;
 }
+@media (min-width: 768px) {
+  .logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
 
 .contacts {
   display: -webkit-box;
@@ -322,7 +361,7 @@ img {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    margin-left: 96px;
+    margin-left: auto;
   }
 }
 .contacts__item:not(:last-child) {
@@ -379,7 +418,6 @@ img {
   }
 }
 .hero {
-  max-width: 1600px;
   margin-left: auto;
   margin-right: auto;
   background-color: #2f303a;
@@ -493,7 +531,7 @@ img {
 
 .modal {
   position: absolute;
-  top: 55%;
+  top: 50%;
   left: 50%;
   width: 450px;
   height: 609px;
@@ -507,6 +545,11 @@ img {
   transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media (max-width: 767px) {
+  .modal {
+    width: calc(100% - 30px);
+  }
 }
 @media (min-width: 769px) {
   .modal {
@@ -597,9 +640,9 @@ img {
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .form__feedback {
-  padding: 12px 16px;
+  padding: 12px 16px 0 16px;
   resize: none;
-  height: 120px;
+  max-height: 120px;
 }
 .form__feedback::-webkit-input-placeholder {
   font-size: 14px;
@@ -713,15 +756,8 @@ img {
   position: relative;
   color: #2196f3;
   text-decoration: none;
-}
-.conditions__agree::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 1px;
-  width: 100%;
-  height: 1px;
-  background-color: #2196f3;
+  border-bottom: 1px solid #2196f3;
+  padding-bottom: 1px;
 }
 
 .checkbox {
@@ -1159,7 +1195,7 @@ img {
   left: 0;
   width: 100%;
   height: 100%;
-  padding: 63px 24px;
+  padding: 77px 24px;
   background: rgba(33, 150, 243, 0.9);
   font-size: 18px;
   font-weight: 400;
@@ -1172,7 +1208,23 @@ img {
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+@media (min-width: 768px) {
+  .portfolio__description {
+    padding: 49px 24px 77px 24px;
+  }
+}
+@media (min-width: 1200px) {
+  .portfolio__description {
+    padding: 63px 24px;
+  }
+}
 
+@media (max-width: 1199px) {
+  .portfolio__link:focus .portfolio__description {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+}
 .portfolio__link:hover .portfolio__description {
   -webkit-transform: translateY(0%);
           transform: translateY(0%);

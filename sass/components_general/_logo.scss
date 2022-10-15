@@ -32,4 +32,9 @@
     @include logoColor($added-text-color);
     margin-bottom: 20px;
   }
+
+  @media (min-width:768px) {
+    display: flex;
+    justify-content: center;
+  }
 }
