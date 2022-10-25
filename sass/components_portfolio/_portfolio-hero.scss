@@ -14,7 +14,7 @@
   }
 
   &__link {
-    position: relative;
+    // position: relative;
     text-decoration: none;
     display: block;
     transition: box-shadow 250ms $timing-function;
@@ -68,19 +68,25 @@
 
     @include font(18px, 400, 1.56);
     color: $added-text-color;
-    transform: translateY(100%);
+    transform: translateY(101%);
     transition: transform 250ms $timing-function;
   }
 }
-@media (max-width:1199px) {
-  .portfolio__link:focus .portfolio__description {
-    transform: translateY(0%);
-  }
-}
 
-.portfolio__link:hover .portfolio__description {
+// @media (max-width:1199px) {
+//   .portfolio__link:hover .portfolio__description {
+//     transform: translateY(0%);
+//   }
+// }
+
+.portfolio__link:hover .portfolio__description,
+.portfolio__link:focus .portfolio__description { 
   transform: translateY(0%);
 }
+
+// .portfolio__link:active .portfolio__description { 
+//   transform: translateY(0%);
+// }
 
 @media (min-width:768px) and (max-width: 1199px) {
 .grow-card {
